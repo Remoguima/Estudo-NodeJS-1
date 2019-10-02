@@ -1,8 +1,16 @@
-var express = require('express');
-var app = express();
+// var express = require('express');
+// var app = express();
+
+/** começa a usar const ou let ao invés de declarar variável com var */
+/**-> vc pode inicializar o app express desse jeito já. A não ser que vc vá precisar usar mais alguma coisa do express.*/
+const app = require('express')();
 
 app.get('/',function(req,res){
     res.send('chupa... consegui fazer a poha do Hello World funfar suahsuahsaush');
 });
 
-app.listen(3000);
+
+// app.listen(3000);
+
+/** é legal colocar um callback nessa função, só para vc saber se o server rodou direitinho */
+app.listen(3000, () => console.log('Servidor rodando...'))
